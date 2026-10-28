@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090713">
+  <title>Glitch Portal: Void Shift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand"><div class="brand-icon">✦</div><div><h1>GLITCH PORTAL <span>VOID SHIFT</span></h1><p>Precision platformer · Reality is unreliable</p></div></div>
+    <button id="soundBtn" class="small-button" aria-pressed="false">♫ Sound: Off</button>
+  </header>
+
+  <main>
+    <section class="hud" aria-label="Game status">
+      <div><small>SECTOR</small><strong id="levelLabel">01 / 10</strong><span id="levelName">The First Shift</span></div>
+      <div><small>SHARDS</small><strong id="shardLabel">0 / 3</strong></div>
+      <div><small>DEATHS</small><strong id="deathLabel">0</strong></div>
+      <div><small>TIME</small><strong id="timeLabel">00:00</strong></div>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="game" width="960" height="540" aria-label="Glitch Portal platform game"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="panel intro-panel">
+          <div class="intro-orbit orbit-one" aria-hidden="true"></div>
+          <div class="intro-orbit orbit-two" aria-hidden="true"></div>
+          <div class="eyebrow"><span class="status-dot"></span> NEON ARCADE <span class="eyebrow-divider">/</span> SYSTEM READY</div>
+          <div class="hero-emblem" aria-hidden="true"><span class="emblem-ring"></span><span class="emblem-star">✦</span><span class="emblem-spark spark-a">✧</span><span class="emblem-spark spark-b">✦</span></div>
+          <p class="kicker">A LITTLE GLITCH. A BIG ADVENTURE.</p>
+          <h2 id="overlayTitle">GLITCH <span class="title-accent">PORTAL</span></h2>
+          <p id="overlayText" class="intro-copy">Jump between neon platforms, collect lost energy shards, and find your way through the portal. Stay sharp—every sector has a surprise.</p>
+          <div class="feature-row"><span>◇ 10 SECTORS</span><span>✧ 30 SHARDS</span><span>↗ QUICK RETRIES</span></div>
+          <div id="levelPicker" class="level-picker"></div>
+          <button id="mainBtn" class="primary"><span class="button-label">ENTER THE PORTAL</span> <span class="button-arrow">↗</span></button>
+          <div class="intro-controls"><span><kbd>A</kbd><kbd>D</kbd> MOVE</span><i></i><span><kbd>SPACE</kbd> JUMP</span><i></i><span><kbd>R</kbd> RETRY</span></div>
+        </div>
+      </div>
+      <div id="toast" class="toast" aria-live="polite"></div>
+    </section>
+
+    <section class="controls">
+      <div><b>MOVE</b><span>A / D or ← / →</span></div>
+      <div><b>JUMP</b><span>W / ↑ / Space</span></div>
+      <div><b>RESTART</b><span>R</span></div>
+      <div><b>MENU</b><span>Esc</span></div>
+      <button id="restartBtn" class="small-button">↻ Restart sector</button>
+    </section>
+    <p class="footer-note">Tip: You can jump a little after leaving a ledge. Collect the three shards for a perfect sector.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
